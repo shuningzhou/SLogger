@@ -14,9 +14,9 @@ Just replace NSLog statements with SLog statements.
 
 ## Logging
 ```objective-c
-[SLogger sharedLogger].maxNumberOfLogFiles = 3;
-[SLogger sharedLogger].maxSizeOfLogFile = 50 * SLOG_KB;
-[SLogger sharedLogger].logLevel = SLogLevelVerbose;
+SLogError(@"Logging level = %@", @"Error");
+SLogInfo(@"Logging level = %@", @"Info");
+SLogVerbose(@"Logging level = %@", @"Verbose");
 ```
 
 ## Reading

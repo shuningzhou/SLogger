@@ -1,6 +1,6 @@
 # SimpleLogger
 
-SimpleLogger is a logging module for iOS. 
+SimpleLogger is a logging module for iOS that allows logging to a file and the console at the same time. It is efficient and super easy to use.
 
 ## How To Use
 Just replace NSLog statements with SLog statements.

@@ -17,15 +17,15 @@
 
 
 typedef NS_ENUM(NSUInteger, SLogLevel) {
-    SLogLevelOff       = 0,
-    SLogLevelError     = 1,
-    SLogLevelInfo     = 2,
-    SLogLevelVerbose   = 3
+    SLogLevelOff        = 0,
+    SLogLevelError      = 1,
+    SLogLevelInfo       = 2,
+    SLogLevelVerbose    = 3
 };
 
 @interface SLogger : NSObject
 
-@property (nonatomic) double maxNumberOfLogFiles;
+@property (nonatomic) NSInteger maxNumberOfLogFiles;
 @property (nonatomic) long maxSizeOfLogFile;
 @property (nonatomic) SLogLevel logLevel;
 

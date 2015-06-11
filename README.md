@@ -19,9 +19,13 @@ SLogInfo(@"Logging level = %@", @"Info");
 SLogVerbose(@"Logging level = %@", @"Verbose");
 ```
 
-## Reading
+## Reading & Removing History Logs
 ```objective-c
-[SLogger sharedLogger].maxNumberOfLogFiles = 3;
-[SLogger sharedLogger].maxSizeOfLogFile = 50 * SLOG_KB;
-[SLogger sharedLogger].logLevel = SLogLevelVerbose;
+[[SLogger sharedLogger] getContentUpTo:100 * SLOG_KB completionHandler:^(NSString *content, NSArray *filesRead) {
+        
+        NSLog(@"Content = %@", content);
+        NSLog(@"FilesRead = %@", filesRead);
+        
+        [[SLogger sharedLogger] removeFiles:filesRead];
+    }];
 ```

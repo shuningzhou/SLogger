@@ -17,16 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [SLogger sharedLogger].maxNumberOfLogFiles = 3;
-    [SLogger sharedLogger].maxSizeOfLogFile = 50 * 1024;
+    [SLogger sharedLogger].maxSizeOfLogFile = 50 * SLOG_KB;
     [SLogger sharedLogger].logLevel = SLogLevelVerbose;
     
     NSString *format = @"Logger level = %@";
     
     SLogError(format, @"Error");
     SLogInfo(format, @"Info");
-    SLogVerbose(format, @"Veerbose");
+    SLogVerbose(format, @"Verbose");
     
-    [[SLogger sharedLogger] getContentUpTo:10 * 1024 completionHandler:^(NSString *content, NSArray *filesRead) {
+    [[SLogger sharedLogger] getContentUpTo:100 * SLOG_KB completionHandler:^(NSString *content, NSArray *filesRead) {
         
         NSLog(@"Content = %@", content);
         NSLog(@"FilesRead = %@", filesRead);

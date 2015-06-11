@@ -39,8 +39,8 @@
         self.dateFormatter = [[NSDateFormatter alloc] init];
         self.dateFormatter.dateFormat = @"yyyy-MM-dd(HH:mm:ss)";
         self.logLevel = SLogLevelVerbose;
-        self.maxSizeOfLogFile = 1024 * 50;
-        self.maxNumberOfLogFiles = 5;
+        self.maxSizeOfLogFile = SLOG_DEFAULT_FILE_SIZE * SLOG_KB;
+        self.maxNumberOfLogFiles = SLOG_DEFAULT_NUMBER_OF_FILES;
         self.operationQueue = [[NSOperationQueue alloc] init];
         [self.operationQueue setMaxConcurrentOperationCount:1];
         

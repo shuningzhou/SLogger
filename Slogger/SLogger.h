@@ -7,6 +7,9 @@
 #import <Foundation/Foundation.h>
 
 #define SLOG_FOLER_NAME @"log"
+#define SLOG_KB 1024
+#define SLOG_DEFAULT_FILE_SIZE 100 //100KB
+#define SLOG_DEFAULT_NUMBER_OF_FILES 5
 
 #define SLogError(frmt, ...) [[SLogger sharedLogger] logAtLogLevel:SLogLevelError format:frmt, ##__VA_ARGS__];
 #define SLogInfo(frmt, ...) [[SLogger sharedLogger] logAtLogLevel:SLogLevelInfo format:frmt, ##__VA_ARGS__];

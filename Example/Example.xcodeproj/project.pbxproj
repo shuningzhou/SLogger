@@ -129,7 +129,8 @@
 				6128E04A1B2A2FF100A62CBB /* SLogger.h */,
 				6128E04B1B2A2FF100A62CBB /* SLogger.m */,
 			);
-			path = Slogger;
+			name = Slogger;
+			path = ../Slogger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,6 +433,7 @@
 				6128E0451B2A2F2200A62CBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6128E0461B2A2F2200A62CBB /* Build configuration list for PBXNativeTarget "ExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +442,7 @@
 				6128E0481B2A2F2200A62CBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
